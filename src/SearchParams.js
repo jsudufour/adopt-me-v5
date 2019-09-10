@@ -25,7 +25,10 @@ const SearchParams = () => {
       setBreeds(breedStrings);
     }, console.error);
   }, [animal, setBreed, setBreeds]);
-  // dependencies; if any of these change, re-run this effect after a renders
+  // dependencies; if any of these change, re-run this effect after a render
+  // to run an effect once, set array to empty (no dependencies)
+  // to run every time something updates, remove the array completely, but can fall into an infinite loop trap
+  // useEffect enforces this dependency array so as to not get into an infinite re-rendering loop
   // scheduling this function to run after the component renders
   // once search params renders for the first time, then it runs the effect
   // why?
