@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 // useEffect takes the place of lifecycle hooks:
 // componentWillMount, componentDidMount, componentDidUpdate
 import pet, { ANIMALS } from "@frontendmasters/pet";
+import Results from "./Results";
 import useDropdown from "./useDropdown";
 // animals array is an array of strings
 
@@ -66,6 +67,7 @@ const SearchParams = () => {
         <BreedDropdown />
         <button>Submit</button>
       </form>
+      <Results pets={pets} />
     </div>
   );
 };
