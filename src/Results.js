@@ -16,7 +16,7 @@ const Results = ({ pets }) => {
             media={pet.photos}
             location={`${pet.contact.address.city}, ${pet.contact.address.state}`}
             id={pet.id}
-          ></Pet>
+          />
         ))
       )}
     </div>
