@@ -3,15 +3,18 @@ import pet from "@frontendmasters/pet";
 import Carousel from "./Carousel";
 
 class Details extends React.Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {
-      loading: true
-    };
+  //   this.state = {
+  //     loading: true
+  //   };
 
-    console.log(props);
-  }
+  //   console.log(props);
+  // }
+
+  state = { loading: true };
+
   componentDidMount() {
     pet.animal(this.props.id).then(({ animal }) => {
       this.setState({
