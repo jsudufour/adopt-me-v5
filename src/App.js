@@ -6,10 +6,7 @@ import Details from "./Details";
 import ThemeContext from "./ThemeContext";
 
 const App = () => {
-  const themeHook = useState({
-    buttonColor: "darkblue",
-    modalColor: "pink"
-  });
+  const themeHook = useState("darkblue");
   return (
     <React.StrictMode>
       <ThemeContext.Provider value={themeHook}>
